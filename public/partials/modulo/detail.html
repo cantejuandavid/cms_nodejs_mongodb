@@ -1,0 +1,79 @@
+<div class='col-md-12'>
+	<h1>
+		{{modulo.name}} 
+		<small id='updated' class='hide text-primary'>
+			<i class="glyphicon glyphicon-ok"></i>
+			{{ modulo.updated }}
+		</small>	
+	</h1>
+	<small class="text-muted">
+		Última Modificación: 	
+		{{ modulo.lastUpdated }}
+	</small>
+	<form ng-submit='saveModulo()'>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="dir">Título</label>
+					<input type="text" ng-model='modulo.name' class='form-control' required>
+				</div>
+
+				<div class="form-group">
+					<label for="dir">Descripción</label>
+					<input type="text" ng-model='modulo.description' class='form-control' required>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="url">URL</label>
+					<input type="text" ng-model='modulo.url' class='form-control'>
+				</div>	
+
+				<div class="form-group">
+					<label for="img">Imagen</label>
+					<input type="file" id='img' name='img' class='form-control'>
+				</div>		
+			</div>
+		</div>
+		
+		
+			
+
+		<div class="form-group">
+			<label for="dir">Contenido</label>
+			<textarea id='contenido' cols="30" rows="10" ng-model='modulo.description_all' class='form-control' required></textarea>			
+		</div>	
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="tag">tag</label>
+					<input type="text" ng-model='modulo.tag' class='form-control'>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="thumbnail">
+					<figure>
+						<figcaption>Imagen Actual</figcaption>
+						<img src="" id='currentImg' class='imgDetail' alt="{{modulo.name}}">
+					</figure>			
+				</div>	
+			</div>
+		</div>
+					
+		<button type="submit" class='btn btn-primary'>
+			<i class="glyphicon glyphicon-check"></i>
+			Guardar
+		</button>
+		<a href='./modulos' class='btn btn-info'>
+			<i class="glyphicon glyphicon-list-alt"></i>
+			Todos
+		</a>
+		<a ng-click='deleteModulo(modulo._id)') class='btn btn-danger'>
+			<i class="glyphicon glyphicon-trash"></i>
+			Eliminar
+		</a>
+	</form>			
+		</li>
+	</ul>		
+</div>

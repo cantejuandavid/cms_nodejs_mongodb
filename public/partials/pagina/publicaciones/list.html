@@ -1,0 +1,17 @@
+<h1>Publicaciones</h1>
+
+<div class="contentThumbPub">			
+	<div class="thumbPub" ng-repeat='p in publicaciones'>
+		<div class="thumb">
+			<div class="title">
+				<a href="#/{{p.url}}">{{ p.title }}</a>
+			</div>
+			<div class="fecha">{{ p.fecha }}</div>
+		</div>					
+		<div class="info">
+			<div class="views">						
+				Visto {{ p.views }} veces
+			</div>
+		</div>
+	</div>						
+</div>	

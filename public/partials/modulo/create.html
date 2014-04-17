@@ -1,0 +1,52 @@
+<div class='col-md-12'>
+	<h1>Crear Módulo</h1>
+
+	<form ng-submit='saveModulo()'>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="dir">Nombre</label>
+					<input type="text" ng-model='modulo.name' class='form-control' required>
+				</div>
+
+				<div class="form-group">
+					<label for="dir">Descripción</label>
+					<input type="text" ng-model='modulo.description' class='form-control' required>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="url">URL</label>
+					<input type="text" ng-model='modulo.url' class='form-control'>
+				</div>	
+
+				<div class="form-group">
+					<label for="img">Imagen</label>
+					<input type="file" id='img' name='img' class='form-control' required>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<label for="dir">Contenido</label>
+			<textarea id='contenido' ng-model='modulo.description_all' class='form-control' required></textarea>			
+		</div>	
+
+		<div class="form-group">
+			<label for="tag">tag</label>
+			<input type="text" ng-model='modulo.tag' class='form-control'>
+		</div>		
+							
+		<a href='./modulos' class='btn btn-info'>
+			<i class="glyphicon glyphicon-arrow-left"></i> 
+			Volver
+		</a>
+		<button type="submit" class='btn btn-primary'>	
+			<i class="glyphicon glyphicon-plus"></i> 
+			Crear
+		</button>
+	</form>	
+		</li>
+	</ul>		
+</div>

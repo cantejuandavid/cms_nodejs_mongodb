@@ -1,0 +1,78 @@
+<h1>
+	{{sponsor.name}}
+	<span id='updated' class='hide text-primary'>
+		<i class="glyphicon glyphicon-ok"></i>
+		{{ sponsor.updated }}
+	</span>	
+</h1>
+
+<small class="text-muted">
+	Última Modificación: 	
+	{{ sponsor.lastUpdated }}
+	<br>
+	Creación: 	
+	{{ sponsor.created }}
+</small>
+
+<form ng-submit='saveSponsor()'>
+	
+	<div class="row">
+		<div class="col-sm-6">
+
+			<div class="form-group">
+				<label for="name">Nombre</label>
+				<input type="text" id='name' ng-model='sponsor.name' class='form-control' required>
+			</div>
+
+			<div class="form-group">
+				<label for="dir">Dirección</label>
+				<input type="text" id='dir' ng-model='sponsor.dir' class='form-control' required>
+			</div>
+						
+		</div>
+		<div class="col-sm-6">
+
+			<div class="form-group">
+				<label for="tel">Teléfono</label>
+				<input type="text" id='tel' ng-model='sponsor.tel' class='form-control' required>
+			</div>
+			<div class="form-group">
+				<label for="pag">Página</label>
+				<input type="text" id='pag' ng-model='sponsor.pag' class='form-control'>
+			</div>				
+
+		</div>
+
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="img">Imagen</label>
+				<input type="file" id='img' name='img' class='form-control' required>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="thumbnail">
+				<figure>
+					<figcaption>Imagen Actual</figcaption>
+					<img src="" id='currentImg' class='imgDetail' alt="{{publicacion.title}}">
+				</figure>			
+			</div>		
+		</div>
+	</div>
+				
+	<button type="submit" class='btn btn-primary'>
+		<i class="glyphicon glyphicon-check"></i>
+		Guardar
+	</button>
+	<a href='./sponsors' class='btn btn-info'>
+		<i class="glyphicon glyphicon-list-alt"></i>
+		Todos
+	</a>
+	<a ng-click='deleteSponsor(sponsor._id)') class='btn btn-danger'>
+		<i class="glyphicon glyphicon-trash"></i>
+		Eliminar
+	</a>
+</form>
+<div id='updated' class="alert alert-info hide">
+	<i class="glyphicon glyphicon-ok"></i>
+	{{ sponsor.updated }}
+</div>			

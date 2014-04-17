@@ -1,0 +1,11 @@
+extends layout
+
+block head	
+	script(src='/plugins/ckeditor/ckeditor.js')
+	script(src='/javascripts/script.js')
+	script(src='/javascripts/controllers.js')
+block content
+	div(ng-app='angularModulo')
+		div(ng-view).panelSistema.col-sm-8.col-md-offset-2
+			
+			

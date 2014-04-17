@@ -1,0 +1,26 @@
+{
+  "name": "application-name",
+  "version": "0.0.1-2",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "body-parser": "~1.0.0",
+    "express-sessions": "latest",
+    "method-override": "~1.0.0",
+    "cookie-parser": "latest",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "latest",
+    "mongoose": "latest",
+    "moment": "~2.6.0",
+    "prerender-node": "~1.0.1"
+  },
+  "subdomain": "juanvc123-sisfec_nodejs",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

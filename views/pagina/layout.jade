@@ -1,0 +1,72 @@
+doctype html
+html(ng-app='publicaciones', ng-controller="MainPublicaciones")
+	head
+		link(rel='stylesheet', href="/plugins/bootstrap/dist/css/bootstrap.min.css")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/plugins/jquery/dist/jquery.min.js')
+		script(src='/plugins/angular/angular.min.js')
+		script(src='/plugins/angular-route/angular-route.js')
+		script(src='/plugins/bootstrap/dist/js/bootstrap.min.js')
+		block head
+	body
+		.bannerTop
+			span.glyphicon.glyphicon-earphone
+			span LLame ahora: Neiva 8769162 / 8769160 - Florencia: 3214087534
+		section.contenedor
+			.top
+				a(href="/" class="logo_sisfec")
+					img(src='/images/logo-sisfec-2.png')
+				nav.botonera
+					ul
+						li <a href='/' class='main a'>Inicio</a>
+						li.
+							<a href="#" class="main b">Productos</a>
+							<ul class="subUnder b">
+								<li><a href='/software' class='main a'>Inicio</a>
+								<li><a href="sisfec">#Otro producto</a></li>
+								<li><a href="sisfec">Otro producto</a></li>
+							</ul>					
+						li.
+							<a href="" class="main c">Herramientas</a>
+							<ul class="subUnder c">
+								<li><a href="sisfec">#Herramienta 1</a></li>
+								<li><a href="sisfec">#Herramienta 2</a></li>
+								<li><a href="sisfec">#Herramienta 3</a></li>
+							</ul>					
+						li <a href='/nosotros' class='main d'>Nosotros</a>									
+						li.
+							<a href='/servicios' class='main e'>Servicios</a>
+							<ul class="subUnder e">
+								<li><a href="sisfec">#Servicio 1</a></li>
+								<li><a href="sisfec">#Servicio 2</a></li>
+								<li><a href="sisfec">#Servicio 3</a></li>
+							</ul>					
+						li <a href='/manual' class='main f'>Manual</a>
+			.frontalTxt
+				.wraperTxt
+					span.Txt Cada vez son más las empresas que confian en SISFEC
+					span.other Por eso cada día mejoramos			
+			block content
+		
+		footer.bottom
+			.containerFooter
+				.contacto
+					address(itemscope, itemtype="http://schema.org/Organization")
+						<span class="title">CONTÁCTANOS</span>
+						ul
+							li <span class="glyphicon glyphicon-globe"></span> Cra 17 #40–27 Int 1						
+							li <span class="glyphicon glyphicon-road"></span> B/ Gualandai Neiva-Huila
+							li <span class="glyphicon glyphicon-earphone"></span> <abbr title="Phone">Tel </abbr>8769162 – 8769160						
+							li <span class="glyphicon glyphicon-envelope"></span> <span itemprop="email">contacto@sisfec.co</span>						
+				.navBottom
+					<h4><b>NAVEGA</b></h4>
+					ul
+						li <span class="glyphicon glyphicon-tag"></span> <a href='/'>Inicio</a>
+						li <span class="glyphicon glyphicon-tag"></span> <a href='/manual'>Manual</a>
+						li <span class="glyphicon glyphicon-tag"></span> <a href='/software'>Software SISFEC</a>
+						li <span class="glyphicon glyphicon-tag"></span> <a href='/modulos'>Módulos SISFEC</a>					
+				.conoceModulos
+					<h4><b>Conoce los Módulos SISFEC</b></h4>
+					<a href='/modulos' class='buttonModulos'>Módulos SISFEC</a>
+				.divCenter
+					<h3>SISFEC 2014</h3>

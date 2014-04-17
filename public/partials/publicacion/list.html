@@ -1,0 +1,40 @@
+<h1>Publicaciones</h1>
+
+Buscar: <input ng-model="query">
+
+Ordenar por:
+<select ng-model='orderProp'>
+	<option value="name">Nombre</option>
+</select>
+<a href='#/create' class='btn btn-info btn-sm'>
+	<i class="glyphicon glyphicon-plus"></i> 
+	Crear
+</a>
+<table class='table table-condensed table-striped table-hover'>
+	<thead>			
+		<th>Título</th>
+		<th>Descripción</th>
+		<th>Views</th>
+		<th>Options</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="p in publicaciones | filter:query | orderBy:orderProp">				
+			<td> {{p.title}}</td>
+			<td> {{p.description_short}} </td>	
+			<td> {{p.views}} </td>		
+			<td>
+				<a href='#/{{p._id}}' class='btn btn-info btn-sm'>
+					<i class="glyphicon glyphicon-edit"></i> 
+					Editar
+				</a>						
+				<a ng-click='deletePublicacion(p._id)') class='btn btn-danger btn-sm'>
+					<i class="glyphicon glyphicon-trash"></i>
+					Eliminar
+				</a>
+			</td>			
+		</tr>
+	</tbody>
+	
+
+	<h4 ng-show='!publicaciones.length'>No hay</h4>
+</table>

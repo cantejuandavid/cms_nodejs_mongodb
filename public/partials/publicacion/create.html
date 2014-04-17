@@ -1,0 +1,52 @@
+<div class='col-md-12'>
+	<h1>Crear Publicación</h1>
+
+	<form ng-submit='savePublicacion()'>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="dir">Título</label>
+					<input type="text" ng-model='publicacion.title' class='form-control' required>
+				</div>
+
+				<div class="form-group">
+					<label for="dir">Descripción</label>
+					<input type="text" ng-model='publicacion.description_short' class='form-control' required>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="url">URL</label>
+					<input type="text" ng-model='publicacion.url' class='form-control'>
+				</div>	
+
+				<div class="form-group">
+					<label for="img">Imagen</label>
+					<input type="file" id='img' name='img' class='form-control' required>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<label for="dir">Contenido</label>
+			<textarea id='contenido' ng-model='publicacion.description' class='form-control' required></textarea>			
+		</div>	
+
+		<div class="form-group">
+			<label for="tag">tag</label>
+			<input type="text" ng-model='publicacion.tag' class='form-control'>
+		</div>		
+							
+		<a href='./publicaciones' class='btn btn-info'>
+			<i class="glyphicon glyphicon-arrow-left"></i> 
+			Volver
+		</a>
+		<button type="submit" class='btn btn-primary'>	
+			<i class="glyphicon glyphicon-plus"></i> 
+			Crear
+		</button>
+	</form>	
+		</li>
+	</ul>		
+</div>

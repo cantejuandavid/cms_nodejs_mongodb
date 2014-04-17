@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	.col-sm-6.col-md-offset-3
+		.well.panelUser
+			h1 Bienvenido
+			h4 #{user.name}
+			span #{user.email}<br>
+			span Fecha creación: #{user.created}<br>
+			script.
+				$(document).ready(function() {
+					var l = !{JSON.stringify(user)};						
+					var lastUpdated = moment(l.lastUpdated).fromNow();					
+					$('#lu').text('Última modificación:' + lastUpdated)
+				})				
+			span(id='lu')

@@ -1,0 +1,366 @@
+transition(seg)
+	-ms-transition all seg ease-in-out
+	-moz-transition all seg ease-in-out
+	-o-transition all seg ease-in-out
+	-webkit-transition all seg ease-in-out
+	transition all seg ease-in-out
+box-shadow()
+	-ms-box-shadow arguments 
+	-moz-box-shadow arguments
+	-o-box-shadow arguments
+	-webkit-box-shadow arguments
+	box-shadow arguments
+
+border-radius()
+	-ms-border-radius arguments 
+	-moz-border-radius arguments
+	-o-border-radius arguments
+	-webkit-border-radius arguments
+	border-radius arguments
+
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300italic")
+@import url("http://fonts.googleapis.com/css?family=Open+Sans")
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:600italic")
+@import url("http://fonts.googleapis.com/css?family=Muli:400italic")
+
+color_primary = #FDC323
+color_verde = #388946
+color_azul = #0E67C0
+color_rojo = #F52823
+os = 'Open Sans'
+osItalic = 'Open Sans Condensed'
+
+
+*, *:before, *:after 
+	-moz-box-sizing border-box
+	-webkit-box-sizing border-box
+	box-sizing border-box	
+
+*
+	margin 0
+	padding 0
+	transition(.05s)
+
+body	
+	font normal normal 14px os, sans-serif
+	overflow-y scroll
+
+div.bannerTop
+	background color_primary
+	color #fff
+	font italic normal 18px osItalic, serif	
+	letter-spacing 1px
+	line-height 25px
+	text-align center
+	width 100%
+section.contenedor
+	position relative		
+	margin 0 auto	
+	width 1100px
+	div.top		
+		display block
+		a.logo_sisfec
+			img
+				left 20px	
+				position absolute
+				width 130px
+		nav.botonera								
+			ul
+				text-align right										
+				li					
+					display inline-block				
+					list-style none				
+					a.main
+						color #525447
+						cursor pointer
+						display inline-block
+						font-family 'Open Sans Condensed', sans-serif !important
+						font-style italic
+						font-size 18px				
+						font-weight 500
+						height 50px	
+						letter-spacing 2px			
+						line-height 40px
+						padding 5px
+						text-align center
+						text-decoration none
+						vertical-align top
+						width 130px
+					&:hover
+						ul.subUnder	
+							display block	
+						a
+							color #fff						
+							&.a,&.d
+								background color_primary
+							&.b,&.e
+								background color_azul
+							&.c
+								background #388946
+							&.f
+								background color_rojo						
+					ul.subUnder					
+						color #fff								
+						display none																					
+						z-index 99999999999
+						position absolute
+						li		
+							display block !important
+							a			
+								text-align center
+								padding 10px
+								display block
+								text-decoration none
+								color #fff
+								width 180px	
+								border-left 5px red
+						&.a,&.e
+							li
+								a
+									background darken(color_azul, 10%)
+									border-bottom 1px solid lighten(color_azul, 2%)
+									&:hover
+										background lighten(color_azul,15%)						
+						&.b
+							li
+								a
+									background darken(color_azul, 10%)
+									border-bottom 1px solid lighten(color_azul, 2%)
+									&:hover
+										background lighten(color_azul,15%)																
+						&.c
+							li
+								a
+									background darken(color_verde, 10%)
+									border-bottom 1px solid lighten(color_verde, 2%)
+									&:hover
+										background lighten(color_verde,15%)
+					.a							
+						border-bottom 2px solid color_primary															
+					.b,.e
+						border-bottom 2px solid color_azul
+					.c					
+						border-bottom 2px solid darken(color_verde, 5%)				
+					.d						
+						border-bottom 2px solid darken(color_primary, 5%)				
+					.f
+						border-bottom 2px solid darken(#F52823, 5%)		
+	div.frontalTxt	
+		display block
+		color color_verde		
+		margin 10px auto
+		text-align center
+		width 100%								
+		.wraperTxt
+			display inline-block			
+			vertical-align middle			
+			span.Txt				
+				font-size 22px
+				font-weight 500
+				font-style italic
+			span.other			
+				display block	
+				font-size 20px	
+
+.contentThumbPub
+	background color_azul		
+	padding 10px
+	box-shadow 0 0 5px rgba(0,0,0,.2)
+	min-height 300px
+	.thumbPub
+		box-sizing border-box
+		background #fff				
+		color #727272
+		display inline-block
+		font bold normal 14px 'Arial', sans-serif
+		margin 0 5px 5px 0		
+		text-shadow 0 0 1px rgba(0,0,0,.1)							
+		vertical-align top
+		width 250px
+		.thumb
+			padding 5px
+			a
+				color color_verde			
+			img
+				float left
+				margin 0 5px 0 0			
+				width 90px
+				height 70px
+		.info
+			background color_primary
+			clear both			
+			display block			
+			padding 5px 0 3px 5px
+			.views
+				color #fff
+				font normal normal 14px arial, sans-serif
+				letter-spacing .2px
+				text-shadow 0 0 0
+.pagePub
+	margin-top 50px
+	.pub
+		display inline-block
+		line-height: 1.6em;
+		padding 0 50px 0 0
+		width 77%
+		h1
+			color color_azul
+			font italic 600 36px 'Open Sans', sans-serif
+		img.center,iframe.center
+			margin 0 auto
+			display block
+			clear both
+		img.img-primary
+			float left
+			margin 0 20px 20px 0
+			width 40%
+		table.center
+			margin 0 auto
+			thead
+				tr
+					th
+						text-align center
+			.text-center
+				text-align center
+		.fecha
+			color #959595
+			display block
+			margin-bottom 20px			
+		.wrapperRedesSociales
+			display block
+			position relative
+			div, iframe				
+				display inline-block
+				margin 0px 10px 0 0
+				vertical-align top
+	.advertising
+		display inline-block
+		margin-top 30px
+		width 22%
+		vertical-align top
+		.adv
+			border-bottom 1px dashed #BFBFBF
+			margin 5px 0 5px 0
+			width 100%
+			height 200px
+			background #F5F5F5
+			padding 5px
+		.relatedTopics	
+			background #F3F3D6
+			border-bottom 1px dashed #BFBFBF		
+			.title
+				display block
+				font bold normal 16px arial, sans-serif
+				padding 5px				
+				line-height 1.4
+			ul							
+				padding 5px										
+				li
+					background #FBFBF0					
+					margin-bottom 10px
+					padding 5px
+					list-style none
+					clear both
+					a						
+						color color_verde
+						font-size 13px
+						display inline-block						
+						vertical-align top
+						div.img	
+							width 90px
+							height 70px
+							border 1px solid orange
+							position relative
+							overflow hidden
+							float left
+							margin-right 5px																		
+							img							
+								width 100%
+								height 100%
+								border 0
+							i
+								box-shadow 0 0 5px rgba(0,0,0,.2)
+								position absolute
+								top 0
+								background color_azul
+								color #fff
+								padding 3px
+								right 0
+
+footer.bottom	
+	display block			
+	background color_azul	
+	margin-top 30px
+	padding 15px
+	text-align center	
+	width 100%
+	box-shadow(0 0 5px rgba(0,0,0,.3))
+	.containerFooter		
+		display block
+		margin 0 auto		
+		.contacto
+			width 300px
+			display inline-block
+			margin-top 10px
+			margin-right 30px
+			vertical-align top
+			address
+				color #fff
+				font-style normal	
+				span.title
+					display block
+					font-weight bold
+					font-size 18px							
+					margin-top 10px
+				ul
+					margin-top 15px
+					border-right 1px dashed #fff
+					li
+						font-style italic
+						font italic normal 16px 'Open Sans', Arial
+						text-decoration: none solid rgb(255, 255, 255);
+						margin-bottom 10px									
+						list-style none
+						text-align left
+						padding-left 50px
+		.navBottom,.conoceModulos
+			margin-top 10px
+			margin-right 30px
+			display inline-block
+			vertical-align top	
+			color #fff						
+			ul				
+				margin-top 25px
+				border-right 1px dashed #fff
+				li
+					margin-right 30px
+					margin-bottom 10px
+					text-align left
+					list-style none					
+					a					
+						color #fff	
+						text-decoration none							
+						text-align left
+						padding-left 10px
+						&:hover
+							text-decoration underline
+			.buttonModulos
+				background color_primary
+				color #fff
+				text-decoration none				
+				margin 0 auto
+				padding 15px
+				font normal bold 18px os, serif
+				color #fff
+				margin-top 50px
+				display block
+				line-height 10px
+				width 80%
+				&:hover
+					text-decoration underline
+		.divCenter
+			display block
+			color #fff
+
+

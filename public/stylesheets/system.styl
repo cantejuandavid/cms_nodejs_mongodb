@@ -1,0 +1,82 @@
+color_primary = #FDC323
+color_verde = #388946
+color_azul = #0E67C0
+color_rojo = #F52823
+os = 'Open Sans'
+osItalic = 'Open Sans Condensed'
+*
+	padding 0
+	margin 0
+body
+	margin 0
+	font normal normal 14px os, sans-serif		
+	padding 0
+	background url('../images/fondo_login.jpg') no-repeat center center fixed
+	background-size cover
+
+a
+	color #5555
+
+.panelUser
+	margin-top 100px
+.loginForm
+	color #fff	
+	margin-top 110px
+	position fixed
+	background rgba(0,0,0,.5)
+	background-clip padding-box
+	border 10px solid rgba(0, 0, 0, .3)
+	border-radius 5px
+	box-shadow 0 0 10px rgba(0,0,0,.1)
+	.form-control
+		background-clip padding-box		
+		font-size 18px
+		height auto
+		border 5px solid rgba(0, 0, 0, .05)
+		padding 10px
+	.btn-star
+		background #12B0DE
+		color #fff
+		padding 10px 20px 10px 20px
+		display block
+		margin 0 auto	
+		
+nav	
+	ul
+		background rgba(0, 0, 0, .5)
+		box-shadow 0 0 10px rgba(0,0,0,.3)
+		text-align right		
+		li
+			list-style none
+			display inline-block			
+			a
+				cursor pointer
+				display block
+				text-decoration none
+				color #fff
+				padding 10px		
+				&:hover
+					color #fff
+					background rgba(63,194,255,.8)								
+				&.salir
+					background #FF3333
+					&:hover
+						background darken(#FF3333, 20%)
+			&.username				
+				float left
+.panelSistema
+	background #FBFBFB
+	min-height 450px	
+	ul.listaPubs
+		li		
+			list-style none
+			display inline-block		
+			padding 10px
+			span
+				display block
+				margin 5px
+				padding 10px
+				background #fff
+
+.imgDetail
+	width 250px

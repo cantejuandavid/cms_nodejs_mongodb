@@ -1,0 +1,40 @@
+<h1>Sponsors</h1>
+
+Search: <input ng-model="query">
+
+Ordenar por:
+<select ng-model='orderProp'>
+	<option value="name">Nombre</option>
+</select>
+<a href='#/create' class='btn btn-info btn-sm'>
+	<i class="glyphicon glyphicon-plus"></i> 
+	Crear
+</a>
+<table class='table table-condensed table-striped table-hover'>
+	<thead>			
+		<th>Name</th>
+		<th>Dir</th>
+		<th>Tel</th>
+		<th>Options</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="s in sponsors | filter:query | orderBy:orderProp">				
+			<td> {{s.name}}</td>
+			<td> {{s.dir}} </td>
+			<td> {{s.tel}} </td>
+			<td>
+				<a href='#/{{s._id}}' class='btn btn-info btn-sm'>
+					<i class="glyphicon glyphicon-edit"></i> 
+					Editar
+				</a>						
+				<a ng-click='deleteSponsor(s._id)') class='btn btn-danger btn-sm'>
+					<i class="glyphicon glyphicon-trash"></i>
+					Eliminar
+				</a>
+			</td>			
+		</tr>
+	</tbody>
+	
+
+	<h4 ng-show='!sponsors.length'>No hay</h4>
+</table>

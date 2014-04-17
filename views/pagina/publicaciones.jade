@@ -1,0 +1,13 @@
+extends layout
+
+block head
+	title {{ seo.pageTitle }}
+	<meta name="fragment" content="!">
+	meta(name="description", content="{{ seo.pageDescription }}")
+	script(src='/javascripts/pagina/script.js')
+	script(src='/javascripts/pagina/controllers.js')
+	script(src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js')
+	script(src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/lang/es.js')
+		
+block content
+	div(ng-view)

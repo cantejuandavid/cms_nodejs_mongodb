@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+		link(rel='stylesheet', href='/stylesheets/system.css')
+	body
+		.row
+		.col-sm-4.col-md-offset-4.loginForm
+			h1 Login
+			form(method='post', action='./login')
+				.form-group
+					label(for='username') Usuario
+					input(type='text', name='username', value= username? '#{username}':'juan', required, autofocus).form-control
+				.form-group
+					label(for='password') Contraseña
+					input(type='password', name='password', value='juan123', required).form-control
+				.form-group
+					if error
+						.alert.alert-danger #{error}
+					input(type="submit", value="login").btn.btn-star

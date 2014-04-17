@@ -1,0 +1,38 @@
+<h1>Modulos</h1>
+
+Buscar: <input ng-model="query">
+
+Ordenar por:
+<select ng-model='orderProp'>
+	<option value="name">Nombre</option>
+</select>
+<a href='#/create' class='btn btn-info btn-sm'>
+	<i class="glyphicon glyphicon-plus"></i> 
+	Crear
+</a>
+<table class='table table-condensed table-striped table-hover'>
+	<thead>			
+		<th>Nombre</th>
+		<th>Descripción</th>
+		<th>Options</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="m in modulos | filter:query | orderBy:orderProp">				
+			<td> {{m.name}}</td>
+			<td> {{m.description}} </td>			
+			<td>
+				<a href='#/{{m._id}}' class='btn btn-info btn-sm'>
+					<i class="glyphicon glyphicon-edit"></i> 
+					Editar
+				</a>						
+				<a ng-click='deleteModulo(m._id)') class='btn btn-danger btn-sm'>
+					<i class="glyphicon glyphicon-trash"></i>
+					Eliminar
+				</a>
+			</td>			
+		</tr>
+	</tbody>
+	
+
+	<h4 ng-show='!modulos.length'>No hay</h4>
+</table>

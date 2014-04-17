@@ -1,0 +1,8 @@
+extends layout
+
+block head
+	script(src='/javascripts/script.js')
+	script(src='/javascripts/controllers.js')
+block content
+	div(ng-app='angularSponsor')
+		<div class='panelSistema col-sm-8 col-md-offset-2' ng-view></div>

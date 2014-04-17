@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href="/plugins/bootstrap/dist/css/bootstrap.min.css")
+		link(rel='stylesheet', href='/stylesheets/system.css')
+		script(src='/plugins/angular/angular.min.js')
+		script(src='/plugins/angular-route/angular-route.js')
+		script(src='/plugins/jquery/dist/jquery.min.js')
+		script(src='/plugins/bootstrap/dist/js/bootstrap.min.js')
+		script(src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js')
+		script(src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/lang/es.js')
+		block head
+	body
+		nav
+			ul
+				li: a(href="/sistema/") Inicio
+				li: a(href="/sistema/sponsors") Sponsors
+				li: a(href="/sistema/modulos") Modulos
+				li: a(href="/sistema/publicaciones") Publicaciones
+				li: a(href="/sistema/logout").salir Salir
+				if user
+					li.username: a <span class='glyphicon glyphicon-user'></span> #{user.username}
+		block content
