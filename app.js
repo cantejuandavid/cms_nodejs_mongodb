@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 require('./controllers/peticiones')(app)
 
-http.createServer(app).listen(3000, function(){
+http.createServer(app).listen(process.env.PORT || 3000, function(){
 	console.log('Express server escuchando en puerto 3000');
 });
 
